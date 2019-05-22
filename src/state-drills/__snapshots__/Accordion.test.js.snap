@@ -1,8 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bomb Component renders an empty li when sections prop is not supplied 1`] = `<ul />`;
+exports[`Accordion Component opens a clicked section 1`] = `
+<ul>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Buddy
+    </button>
+  </li>
+  <li
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Guy
+    </button>
+    <p>
+      I'm not your buddy, guy!
+    </p>
+  </li>
+</ul>
+`;
 
-exports[`Bomb Component renders the UI as expected 1`] = `
+exports[`Accordion Component opens only last clicked section 1`] = `
+<ul>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Buddy
+    </button>
+    <p>
+      Hello, buddy!
+    </p>
+  </li>
+  <li
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Guy
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Accordion Component renders an empty li when sections prop is not supplied 1`] = `<ul />`;
+
+exports[`Accordion Component renders the UI as expected 1`] = `
 <ul>
   <li>
     <button
@@ -12,6 +64,29 @@ exports[`Bomb Component renders the UI as expected 1`] = `
     </button>
   </li>
   <li>
+    <button
+      onClick={[Function]}
+    >
+      Guy
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Accordion Component renders the no sections by default 1`] = `
+<ul>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Buddy
+    </button>
+  </li>
+  <li
+    key="1"
+  >
     <button
       onClick={[Function]}
     >

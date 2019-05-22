@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Accordion from './Accordion';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 
 
-describe('Bomb Component', () => {
+describe('Accordion Component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Accordion />, div);
@@ -37,7 +39,52 @@ describe('Bomb Component', () => {
     expect(tree).toMatchSnapshot();
   })
   
-  it('renders no sections as active by default', () => {
-    
+  it('renders the no sections by default', () => {
+    const wrapper = shallow(<Accordion sections={[
+      {
+        title: 'Buddy',
+        content: 'Hello, buddy!',
+      },
+
+      {
+        title: 'Guy',
+        content: `I'm not your buddy, guy!`,
+      }
+    ]} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
+
+  it('opens a clicked section', () => {
+  const wrapper = shallow(<Accordion sections={[
+    {
+      title: 'Buddy',
+      content: 'Hello, buddy!',
+    },
+
+    {
+      title: 'Guy',
+      content: `I'm not your buddy, guy!`,
+    }
+  ]} />)
+  wrapper.find('button').at(1).simulate('click')
+  expect(toJson(wrapper)).toMatchSnapshot()
+  })
+
+  it('opens only last clicked section', () => {
+    const wrapper = shallow(<Accordion sections={[
+      {
+        title: 'Buddy',
+        content: 'Hello, buddy!',
+      },
+  
+      {
+        title: 'Guy',
+        content: `I'm not your buddy, guy!`,
+      }
+    ]} />)
+    wrapper.find('button').at(1).simulate('click')
+    wrapper.find('button').at(0).simulate('click')
+    expect(toJson(wrapper)).toMatchSnapshot()
+    })
+
 })
