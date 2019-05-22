@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Accordian extends React.Component{
+class Accordion extends React.Component{
   static defaultProps = {sections: []}
 
   state = {
@@ -38,4 +38,4 @@ class Accordian extends React.Component{
   }
 }
 
-export default Accordian;
+export default Accordion;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Accordian from './state-drills/Accordian';
+import Accordion from './state-drills/Accordion';
 import './App.css';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
   ]
   return (
     <div className="App">
-      <Accordian sections={sections} />
+      <Accordion sections={sections} />
     </div>
   );
 }

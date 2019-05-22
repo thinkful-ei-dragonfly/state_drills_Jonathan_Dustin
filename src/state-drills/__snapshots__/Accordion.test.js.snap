@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bomb Component renders an empty li when sections prop is not supplied 1`] = `<ul />`;
+
+exports[`Bomb Component renders the UI as expected 1`] = `
+<ul>
+  <li>
+    <button
+      onClick={[Function]}
+    >
+      Buddy
+    </button>
+  </li>
+  <li>
+    <button
+      onClick={[Function]}
+    >
+      Guy
+    </button>
+  </li>
+</ul>
+`;
