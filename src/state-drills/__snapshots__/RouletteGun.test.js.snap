@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello World Component renders the UI as expected 1`] = `
+<div>
+  <p>
+    
+  </p>
+  <button>
+    Pull the trigger
+  </button>
+</div>
+`;

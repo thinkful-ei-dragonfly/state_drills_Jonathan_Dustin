@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
-import Bomb from './state-drills/Bomb';
+import RouletteGun from './state-drills/RouletteGun';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Bomb />
+      <RouletteGun bulletInChamber={4} />
     </div>
   );
 }
