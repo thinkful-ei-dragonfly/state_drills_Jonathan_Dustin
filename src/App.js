@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
-import HelloWorld from './state-drills/HelloWorld';
+import Bomb from './state-drills/Bomb';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <HelloWorld />
+      <Bomb />
     </div>
   );
 }
