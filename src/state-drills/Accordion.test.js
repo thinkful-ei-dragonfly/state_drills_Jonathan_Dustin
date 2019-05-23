@@ -25,8 +25,7 @@ describe('Accordion Component', () => {
           title: 'Guy',
           content: `I'm not your buddy, guy!`,
         }
-      ]
-      } />
+      ]} />
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
